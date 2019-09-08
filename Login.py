@@ -4,9 +4,8 @@ from tkinter import *
 app = tkinter.Tk()
 app.title("Please login")
 
-# Code to add widgets will go here...
-label1 = Label(app, text="Username").grid(sticky=E)
-label2 = Label(app, text="Password").grid(sticky=E)
+lblun = Label(app, text="Username").grid(sticky=E)
+lblpw = Label(app, text="Password").grid(sticky=E)
 txtun = Entry(app, width=20)
 txtun.grid(row=0, column=1)
 txtpw = Entry(app, width=20, show="*")
