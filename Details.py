@@ -29,4 +29,12 @@ txtNumber.grid(row=5, column=1)
 btnOk = Button(app, text="OK").grid(column=0, row=7)
 btnExit = Button(app, text="Exit", command=app.destroy).grid(column=1, row=7)
 
+
+def aredetailsvalid(title, fname, sname, address, email, number):
+    if not title or fname or sname or address or email or number:
+        return False
+    else:
+        return True
+
+
 app.mainloop()
