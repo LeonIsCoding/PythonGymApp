@@ -13,6 +13,6 @@ lblExistingCustomer = Label(app, text="Is customer a gym member?").grid(sticky=E
 cbxExistingCustomer = Checkbutton(app).grid(column=1, row=6)
 
 btnOk = Button(app, text="OK").grid(column=0, row=7)
-btnExit = Button(app, text="Exit").grid(column=1, row=7)
+btnExit = Button(app, text="Exit", command=app.destroy).grid(column=1, row=7)
 
 app.mainloop()
