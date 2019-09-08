@@ -13,11 +13,23 @@ txtpw = Entry(app, width=20, show="*")
 txtpw.grid(row=1, column=1)
 
 
-def authorizeuser():
-    username = txtun.get()
-    password = txtpw.get()
+def isuservalid():
+    username = txtun.get().lower()
+    password = txtpw.get().lower()
+    if username and password == "admin":
+        return True
+    else:
+        return False
 
 
-button1 = Button(app, text="Log in", command=authorizeuser).grid(row=2, column=2)
+def loginuser():
+    from tkinter import messagebox
+    if isuservalid():
+        messagebox.showinfo("Success", "The user is valid")
+    else:
+        messagebox.showerror("Failure", "The user is NOT valid")
+
+
+button1 = Button(app, text="Log in", command=loginuser).grid(row=2, column=2)
 
 app.mainloop()
