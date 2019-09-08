@@ -3,6 +3,9 @@ import tkinter
 from tkinter import *
 app = tkinter.Tk()
 app.title("Please login")
+app.geometry('250x75')
+app.resizable(0, 0)
+
 
 lblun = Label(app, text="Username").grid(sticky=E)
 lblpw = Label(app, text="Password").grid(sticky=E)
