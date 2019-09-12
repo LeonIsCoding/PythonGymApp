@@ -41,7 +41,7 @@ btnOk = Button(app, text="OK", command=recorduser).grid(column=0, row=7)
 
 
 def aredetailsvalid(title, fname, sname, address, email, number):
-    if not title or fname or sname or address or email or number:
+    if not title or not fname or not sname or not address or not email or not number:
         return False
     else:
         return True
