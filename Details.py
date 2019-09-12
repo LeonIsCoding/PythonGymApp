@@ -44,7 +44,17 @@ def aredetailsvalid(title, fname, sname, address, email, number):
     if not title or not fname or not sname or not address or not email or not number:
         return False
     else:
+        createuser(title, fname, sname, address, email, number)
         return True
+
+
+def createuser(title, fname, sname, address, email, number):
+    UserDetails.set_Address(UserDetails(), address)
+    UserDetails.set_Email(UserDetails(), email)
+    UserDetails.set_FirstName(UserDetails(), fname)
+    UserDetails.set_Number(UserDetails(), number)
+    UserDetails.set_Surname(UserDetails(), sname)
+    UserDetails.set_Title(UserDetails(), title)
 
 
 app.mainloop()
