@@ -48,3 +48,52 @@ def aredetailsvalid(title, fname, sname, address, email, number):
 
 
 app.mainloop()
+
+
+class UserDetails:
+
+    def __init__(self, Title=None, FirstName=None, Surname=None, Address=None, Email=None, Number=None):
+        self.Title = Title
+        self.FirstName = FirstName
+        self.Surname = Surname
+        self.Address = Address
+        self.Email = Email
+        self.Number = Number
+
+    """ Constructors """
+
+    def get_Title(self):
+        return self.Title
+
+    def set_Title(self, Title):
+        self.Title = Title
+
+    def get_FirstName(self):
+        return self.FirstName
+
+    def set_FirstName(self, FirstName):
+        self.FirstName = FirstName
+
+    def get_Surname(self):
+        return self.Surname
+
+    def set_Surname(self, Surname):
+        self.Surname = Surname
+
+    def get_Address(self):
+        return self.Address
+
+    def set_Address(self, Address):
+        self.Address = Address
+
+    def get_Email(self):
+        return self.Email
+
+    def set_Email(self, Email):
+        self.Email = Email
+
+    def get_Number(self):
+        return self.Number
+
+    def set_Number(self, Number):
+        self.Number = Number
