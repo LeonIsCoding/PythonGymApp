@@ -1,7 +1,7 @@
 
 # PythonGymApp
 ## README
-This application is a remake of another project called "East Surrey College Gym App" written in C#. I wanted to remake the application in Python 3.
+This application is a remake of another project called "ESC Gym App" written in C#. I wanted to remake the application in Python 3.
 
 [View original Project here](https://github.com/lovelyleon/East-Surrey-College-Gym-App)
 
