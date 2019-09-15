@@ -18,7 +18,7 @@ class Customer:
         self.title = title
 
     def get_first_name(self):
-        return self.firstName
+        return self.first_name
 
     def set_first_name(self, first_name):
         self.first_name = first_name
