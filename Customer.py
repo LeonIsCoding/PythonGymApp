@@ -1,12 +1,13 @@
 class Customer:
 
-    def __init__(self, title=None, first_name=None, surname=None, address=None, email=None, number=None):
+    def __init__(self, title=None, first_name=None, surname=None, address=None, email=None, number=None, member=None):
         self.title = title
         self.first_name = first_name
         self.surname = surname
         self.address = address
         self.email = email
         self.number = number
+        self.member = member
 
     """ Constructors """
 
@@ -45,3 +46,9 @@ class Customer:
 
     def set_number(self, number):
         self.number = number
+
+    def get_member(self):
+        return self.member
+
+    def set_member(self, member):
+        self.member = member
