@@ -60,50 +60,50 @@ def createuser(title, fname, sname, address, email, number):
 app.mainloop()
 
 
-class UserDetails:
+class Customer:
 
-    def __init__(self, Title=None, FirstName=None, Surname=None, Address=None, Email=None, Number=None):
-        self.Title = Title
-        self.FirstName = FirstName
-        self.Surname = Surname
-        self.Address = Address
-        self.Email = Email
-        self.Number = Number
+    def __init__(self, title=None, first_name=None, surname=None, address=None, email=None, number=None):
+        self.title = title
+        self.first_name = first_name
+        self.surname = surname
+        self.address = address
+        self.email = email
+        self.number = number
 
     """ Constructors """
 
-    def get_Title(self):
-        return self.Title
+    def get_title(self):
+        return self.title
 
-    def set_Title(self, Title):
-        self.Title = Title
+    def set_title(self, title):
+        self.title = title
 
-    def get_FirstName(self):
-        return self.FirstName
+    def get_first_name(self):
+        return self.firstName
 
-    def set_FirstName(self, FirstName):
-        self.FirstName = FirstName
+    def set_first_name(self, first_name):
+        self.first_name = first_name
 
-    def get_Surname(self):
-        return self.Surname
+    def get_surname(self):
+        return self.surname
 
-    def set_Surname(self, Surname):
-        self.Surname = Surname
+    def set_surname(self, surname):
+        self.surname = surname
 
-    def get_Address(self):
-        return self.Address
+    def get_address(self):
+        return self.address
 
-    def set_Address(self, Address):
-        self.Address = Address
+    def set_address(self, address):
+        self.address = address
 
-    def get_Email(self):
-        return self.Email
+    def get_email(self):
+        return self.email
 
-    def set_Email(self, Email):
-        self.Email = Email
+    def set_email(self, email):
+        self.email = email
 
-    def get_Number(self):
-        return self.Number
+    def get_number(self):
+        return self.number
 
-    def set_Number(self, Number):
-        self.Number = Number
+    def set_number(self, number):
+        self.number = number
