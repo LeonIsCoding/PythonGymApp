@@ -49,13 +49,14 @@ def are_details_valid(title, first_name, surname, address, email, number):
 
 
 def create_user(title, first_name, surname, address, email, number):
-    import Customer
-    Customer.set_address(Customer(), address)
-    Customer.set_email(Customer(), email)
-    Customer.set_first_name(Customer(), first_name)
-    Customer.set_number(Customer(), number)
-    Customer.set_surname(Customer(), surname)
-    Customer.set_title(Customer(), title)
+    from Customer import Customer
+    cu = Customer()
+    cu.set_address(cu, address)
+    cu.set_email(cu, email)
+    cu.set_first_name(cu, first_name)
+    cu.set_number(cu, number)
+    cu.set_surname(cu, surname)
+    cu.set_title(cu, title)
 
 
 app.mainloop()
