@@ -40,11 +40,11 @@ def record_user():
 btnOk = Button(app, text="OK", command=record_user).grid(column=0, row=7)
 
 
-def aredetailsvalid(title, fname, sname, address, email, number):
-    if not title or not fname or not sname or not address or not email or not number:
+def aredetailsvalid(title, first_name, surname, address, email, number):
+    if not title or not first_name or not surname or not address or not email or not number:
         return False
     else:
-        createuser(title, fname, sname, address, email, number)
+        createuser(title, first_name, surname, address, email, number)
         return True
 
 
