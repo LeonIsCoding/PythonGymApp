@@ -29,7 +29,7 @@ txtNumber.grid(row=5, column=1)
 btnExit = Button(app, text="Exit", command=app.destroy).grid(column=1, row=7)
 
 
-def recorduser():
+def record_user():
     from tkinter import messagebox
     if aredetailsvalid(txtTitle.get(), txtFirstName.get(), txtSurname.get(), txtAddress.get(), txtEmail.get(), txtNumber.get()):
         messagebox.showinfo("Success", "All details seem valid")
@@ -37,7 +37,7 @@ def recorduser():
         messagebox.showerror("Failure", "Not all details are valid")
 
 
-btnOk = Button(app, text="OK", command=recorduser).grid(column=0, row=7)
+btnOk = Button(app, text="OK", command=record_user).grid(column=0, row=7)
 
 
 def aredetailsvalid(title, fname, sname, address, email, number):
