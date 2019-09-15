@@ -31,7 +31,7 @@ btnExit = Button(app, text="Exit", command=app.destroy).grid(column=1, row=7)
 
 def record_user():
     from tkinter import messagebox
-    if aredetailsvalid(txtTitle.get(), txtFirstName.get(), txtSurname.get(), txtAddress.get(), txtEmail.get(), txtNumber.get()):
+    if are_details_valid(txtTitle.get(), txtFirstName.get(), txtSurname.get(), txtAddress.get(), txtEmail.get(), txtNumber.get()):
         messagebox.showinfo("Success", "All details seem valid")
     else:
         messagebox.showerror("Failure", "Not all details are valid")
@@ -40,21 +40,21 @@ def record_user():
 btnOk = Button(app, text="OK", command=record_user).grid(column=0, row=7)
 
 
-def aredetailsvalid(title, first_name, surname, address, email, number):
+def are_details_valid(title, first_name, surname, address, email, number):
     if not title or not first_name or not surname or not address or not email or not number:
         return False
     else:
-        createuser(title, first_name, surname, address, email, number)
+        create_user(title, first_name, surname, address, email, number)
         return True
 
 
-def createuser(title, fname, sname, address, email, number):
-    Customer.set_Address(Customer(), address)
-    Customer.set_Email(Customer(), email)
-    Customer.set_FirstName(Customer(), fname)
-    Customer.set_Number(Customer(), number)
-    Customer.set_Surname(Customer(), sname)
-    Customer.set_Title(Customer(), title)
+def create_user(title, first_name, surname, address, email, number):
+    Customer.set_address(Customer(), address)
+    Customer.set_email(Customer(), email)
+    Customer.set_first_name(Customer(), first_name)
+    Customer.set_number(Customer(), number)
+    Customer.set_surname(Customer(), surname)
+    Customer.set_title(Customer(), title)
 
 
 app.mainloop()
