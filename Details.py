@@ -49,12 +49,12 @@ def aredetailsvalid(title, fname, sname, address, email, number):
 
 
 def createuser(title, fname, sname, address, email, number):
-    UserDetails.set_Address(UserDetails(), address)
-    UserDetails.set_Email(UserDetails(), email)
-    UserDetails.set_FirstName(UserDetails(), fname)
-    UserDetails.set_Number(UserDetails(), number)
-    UserDetails.set_Surname(UserDetails(), sname)
-    UserDetails.set_Title(UserDetails(), title)
+    Customer.set_Address(Customer(), address)
+    Customer.set_Email(Customer(), email)
+    Customer.set_FirstName(Customer(), fname)
+    Customer.set_Number(Customer(), number)
+    Customer.set_Surname(Customer(), sname)
+    Customer.set_Title(Customer(), title)
 
 
 app.mainloop()
