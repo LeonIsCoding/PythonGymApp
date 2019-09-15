@@ -49,6 +49,7 @@ def are_details_valid(title, first_name, surname, address, email, number):
 
 
 def create_user(title, first_name, surname, address, email, number):
+    import Customer
     Customer.set_address(Customer(), address)
     Customer.set_email(Customer(), email)
     Customer.set_first_name(Customer(), first_name)
@@ -58,52 +59,3 @@ def create_user(title, first_name, surname, address, email, number):
 
 
 app.mainloop()
-
-
-class Customer:
-
-    def __init__(self, title=None, first_name=None, surname=None, address=None, email=None, number=None):
-        self.title = title
-        self.first_name = first_name
-        self.surname = surname
-        self.address = address
-        self.email = email
-        self.number = number
-
-    """ Constructors """
-
-    def get_title(self):
-        return self.title
-
-    def set_title(self, title):
-        self.title = title
-
-    def get_first_name(self):
-        return self.firstName
-
-    def set_first_name(self, first_name):
-        self.first_name = first_name
-
-    def get_surname(self):
-        return self.surname
-
-    def set_surname(self, surname):
-        self.surname = surname
-
-    def get_address(self):
-        return self.address
-
-    def set_address(self, address):
-        self.address = address
-
-    def get_email(self):
-        return self.email
-
-    def set_email(self, email):
-        self.email = email
-
-    def get_number(self):
-        return self.number
-
-    def set_number(self, number):
-        self.number = number
