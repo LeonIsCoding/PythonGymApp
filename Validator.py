@@ -1,4 +1,4 @@
-class Validator:
+class ValidatorClass:
     @staticmethod
     def isempty(value):
         value = value.strip()
