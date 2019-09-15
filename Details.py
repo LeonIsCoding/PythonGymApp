@@ -57,6 +57,8 @@ def create_user(title, first_name, surname, address, email, number):
     cu.set_number(cu, number)
     cu.set_surname(cu, surname)
     cu.set_title(cu, title)
+    # TODO use checkbox from form to actually populate this
+    cu.set_member(cu, True)
 
 
 app.mainloop()
