@@ -12,7 +12,8 @@ lblAddress = Label(app, text="First line of address").grid(sticky=E)
 lblEmail = Label(app, text="Email address").grid(sticky=E)
 lblNumber = Label(app, text="Phone number").grid(sticky=E)
 lblExistingCustomer = Label(app, text="Is customer a gym member?").grid(sticky=E)
-cbxExistingCustomer = Checkbutton(app).grid(column=1, row=6)
+varExistingCustomer = BooleanVar()
+cbxExistingCustomer = Checkbutton(app, variable=varExistingCustomer).grid(column=1, row=6)
 txtTitle = Entry(app, width=20)
 txtTitle.grid(row=0, column=1)
 txtFirstName = Entry(app, width=20)
@@ -51,14 +52,13 @@ def are_details_valid(title, first_name, surname, address, email, number):
 def create_user(title, first_name, surname, address, email, number):
     from Customer import Customer
     cu = Customer()
-    cu.set_address(cu, address)
-    cu.set_email(cu, email)
-    cu.set_first_name(cu, first_name)
-    cu.set_number(cu, number)
-    cu.set_surname(cu, surname)
-    cu.set_title(cu, title)
-    # TODO use checkbox from form to actually populate this
-    cu.set_member(cu, True)
+    cu.set_address(address)
+    cu.set_email(email)
+    cu.set_first_name(first_name)
+    cu.set_number(number)
+    cu.set_surname(surname)
+    cu.set_title(title)
+    cu.set_member(varExistingCustomer.get())
 
 
 app.mainloop()
