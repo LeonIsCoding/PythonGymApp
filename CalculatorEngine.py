@@ -1,6 +1,9 @@
+import math
+
+
 class CalculatorEngine:
 
-    def __init__(self, age_years, weight_kg, height_cm, bmi_category, is_male, exercise_level, height_m, bmr, bmi, rdi):
+    def __init__(self, age_years=None, weight_kg=None, height_cm=None, bmi_category=None, is_male=None, exercise_level=None, height_m=None, bmr=None, bmi=None, rdi=None):
         self.age_years = age_years
         self.weight_kg = weight_kg
         self.height_cm = height_cm
@@ -63,8 +66,8 @@ class CalculatorEngine:
     def get_bmi(self):
         return self.bmi
 
-    def set_bmi(self, bmi):
-        self.bmi = bmi
+    def set_bmi(self):
+        self.bmi = self.calc_bmi()
 
     def get_rdi(self):
         return self.rdi
@@ -89,4 +92,9 @@ class CalculatorEngine:
         else:
             result = WOMEN_BMR_FACTOR + (WOMEN_WEIGHT_FACTOR * self.weight_kg) + (WOMEN_HEIGHT_FACTOR * self.height_cm)\
                      - (WOMEN_AGE_FACTOR * self.age_years)
+        return result
+
+    def calc_bmi(self):
+        result = self.weight_kg / math.pow(self.height_m, 2)
+
         return result
