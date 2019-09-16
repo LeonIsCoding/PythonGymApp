@@ -1,8 +1,8 @@
 class CalculatorEngine:
 
-    def __init__(self, age_years, weight, height_cm, bmi_category, is_male, exercise_level, height_m, bmr, bmi, rdi):
+    def __init__(self, age_years, weight_kg, height_cm, bmi_category, is_male, exercise_level, height_m, bmr, bmi, rdi):
         self.age_years = age_years
-        self.weight = weight
+        self.weight_kg = weight_kg
         self.height_cm = height_cm
         self.bmi_category = bmi_category
         self.is_male = is_male
@@ -21,8 +21,8 @@ class CalculatorEngine:
     def get_weight(self):
         return self.weight
 
-    def set_weight(self, weight):
-        self.weight = weight
+    def set_weight(self, weight_kg):
+        self.weight_kg = weight_kg
 
     def get_height_cm(self):
         return self.height_cm
