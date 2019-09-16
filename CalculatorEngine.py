@@ -71,3 +71,22 @@ class CalculatorEngine:
 
     def set_rdi(self, rdi):
         self.rdi = rdi
+
+    def bmr_rhb(self):
+        MEN_BMR_FACTOR = 88.362
+        MEN_WEIGHT_FACTOR = 13.397
+        MEN_HEIGHT_FACTOR = 4.799
+        MEN_AGE_FACTOR = 5.677
+
+        WOMEN_BMR_FACTOR = 447.593
+        WOMEN_WEIGHT_FACTOR = 9.247
+        WOMEN_HEIGHT_FACTOR = 3.098
+        WOMEN_AGE_FACTOR = 4.330
+
+        if self.is_male:
+            result = MEN_BMR_FACTOR + (MEN_WEIGHT_FACTOR * self.weight_kg) + (MEN_HEIGHT_FACTOR * self.height_cm) - \
+                     (MEN_AGE_FACTOR * self.age_years)
+        else:
+            result = WOMEN_BMR_FACTOR + (WOMEN_WEIGHT_FACTOR * self.weight_kg) + (WOMEN_HEIGHT_FACTOR * self.height_cm)\
+                     - (WOMEN_AGE_FACTOR * self.age_years)
+        return result
