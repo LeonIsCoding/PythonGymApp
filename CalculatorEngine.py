@@ -94,6 +94,26 @@ class CalculatorEngine:
                      - (WOMEN_AGE_FACTOR * self.age_years)
         return result
 
+    # TODO merge this method into "bmr_rhb" for a single method that can calculate BMR with various calculations
+    def bmr_hb(self):
+        MEN_BMR_FACTOR = 66.47
+        MEN_WEIGHT_FACTOR = 13.75
+        MEN_HEIGHT_FACTOR = 5.003
+        MEN_AGE_FACTOR = 6.755
+
+        WOMEN_BMR_FACTOR = 655.1
+        WOMEN_WEIGHT_FACTOR = 9.563
+        WOMEN_HEIGHT_FACTOR = 1.850
+        WOMEN_AGE_FACTOR = 4.676
+
+        if self.is_male:
+            result = MEN_BMR_FACTOR + (MEN_WEIGHT_FACTOR * self.weight_kg) + (MEN_HEIGHT_FACTOR * self.height_cm) - \
+                     (MEN_AGE_FACTOR * self.age_years)
+        else:
+            result = WOMEN_BMR_FACTOR + (WOMEN_WEIGHT_FACTOR * self.weight_kg) + (WOMEN_HEIGHT_FACTOR * self.height_cm) \
+                     - (WOMEN_AGE_FACTOR * self.age_years)
+        return result
+
     def calc_bmi(self):
         result = self.weight_kg / math.pow(self.height_m, 2)
 
