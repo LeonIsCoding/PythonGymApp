@@ -118,3 +118,35 @@ class CalculatorEngine:
         result = self.weight_kg / math.pow(self.height_m, 2)
 
         return result
+
+    def calc_rdi(self, level, bmr):
+        DIRFACTOR_NONE = 1.2
+        DIRFACTOR_LIGHT = 1.375
+        DIRFACTOR_MODERATE = 1.55
+        DIRFACTOR_HEAVY = 1.725
+        DIRFACTOR_VERYHEAVY = 1.9
+
+        if level == "Sedentary":
+            result = bmr * DIRFACTOR_NONE
+        elif level == "Light (1-3 days per week)":
+            result = bmr * DIRFACTOR_LIGHT
+        elif level == "Moderate (3-5 days per week)":
+            result = bmr * DIRFACTOR_MODERATE
+        elif level == "Heavy (6-7 days per week)":
+            result = bmr * DIRFACTOR_HEAVY
+        elif level == "Very Heavy (Twice per day or more)":
+            result = bmr * DIRFACTOR_VERYHEAVY
+        else:
+            raise ValueError('RDI Level seems to be wrong')
+        return result
+
+    def calc_bmi_category(self, bmi):
+        if bmi < 18.5:
+            category = "Underweight"
+        elif 18.5 <= bmi <= 24.9:
+            category = "Healthy"
+        elif 25 <= bmi >= 29.9:
+            category = "Overweight"
+        else:
+            category = "Obese"
+        return category
