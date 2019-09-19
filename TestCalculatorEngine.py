@@ -14,3 +14,10 @@ class TestCalculatorEngine(unittest.TestCase):
         Engine.bmi = Engine.calc_bmi()
 
         self.assertEqual(14.512471655328797, Engine.get_bmi())
+
+    def test_calc_rdi(self):
+        self.assertEqual(1200.0, Engine.calc_rdi("Sedentary", 1000))
+        self.assertEqual(1375.0, Engine.calc_rdi("Light (1-3 days per week)", 1000))
+        self.assertEqual(1550.0, Engine.calc_rdi("Moderate (3-5 days per week)", 1000))
+        self.assertEqual(1725.0, Engine.calc_rdi("Heavy (6-7 days per week)", 1000))
+        self.assertEqual(1900.0, Engine.calc_rdi("Very Heavy (Twice per day or more)", 1000))
