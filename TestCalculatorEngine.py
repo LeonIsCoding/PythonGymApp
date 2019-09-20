@@ -23,7 +23,7 @@ class TestCalculatorEngine(unittest.TestCase):
         self.assertEqual(1900.0, Engine.calc_rdi("Very Heavy (Twice per day or more)", 1000))
 
     def test_calc_bmr(self):
-        Engine.is_male = True
+        Engine.is_male = False
         Engine.age_years = 21
         Engine.weight_kg = 64
         Engine.height_cm = 210
