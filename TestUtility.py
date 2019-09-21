@@ -3,7 +3,7 @@ from Utility import Utility
 
 
 class MyTestCase(unittest.TestCase):
-    def test_roundvalue(self):
+    def test_round_value(self):
         self.assertEqual(10, Utility.roundvalue(0, 9.51))
         self.assertEqual(9, Utility.roundvalue(0, 9.49))
         self.assertEqual(10.5, Utility.roundvalue(1, 10.457))
