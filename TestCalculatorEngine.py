@@ -30,3 +30,9 @@ class TestCalculatorEngine(unittest.TestCase):
         Engine.bmi = Engine.calc_bmi()
 
         self.assertEqual(14.512471655328797, Engine.get_bmi())
+
+    def test_calc_bmi_category(self):
+        self.assertEqual("Underweight", Engine.calc_bmi_category(16))
+        self.assertEqual("Healthy", Engine.calc_bmi_category(19.5))
+        self.assertEqual("Overweight", Engine.calc_bmi_category(26.4))
+        self.assertEqual("Obese", Engine.calc_bmi_category(31))

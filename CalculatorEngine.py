@@ -145,7 +145,7 @@ class CalculatorEngine:
             category = "Underweight"
         elif 18.5 <= bmi <= 24.9:
             category = "Healthy"
-        elif 25 <= bmi >= 29.9:
+        elif 25 <= bmi < 29.9:
             category = "Overweight"
         else:
             category = "Obese"
